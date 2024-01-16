@@ -9,13 +9,6 @@ class RPS(Enum):
     SCISSORS = 3
 
 
-print(RPS(2))
-print(RPS.ROCK)
-print(RPS['ROCK'])
-print(RPS.ROCK.value)
-sys.exit
-
-
 print("")
 playerchoice = input(
     "Enter...\n1 for Rock, \n2 for paper, or \n3 for scissors:\n\n")
@@ -30,8 +23,8 @@ computerchoice = random.choice("123")
 computer = int(computerchoice)
 
 print("")
-print("You chose " + playerchoice + ".")
-print("Python chose " + computerchoice + ".")
+print("You chose " + str(RPS(player)) + ".")
+print("Python chose " + str(RPS(computer)) + ".")
 print("")
 
 if player == 1 and computer == 3:
@@ -43,4 +36,4 @@ elif player == 3 and computer == 2:
 elif player == computer:
     print("😲 Tie game")
 else:
-    print("💀💀 Python win")
+    print("💀💀 Python wins")
